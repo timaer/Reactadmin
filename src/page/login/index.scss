@@ -1,0 +1,17 @@
+#loginout{background-color: #2d3a4b;width:100%;text-align: center;display: flex;align-items: center;justify-content: center;}
+#logincon{background-color:#2d3a4b;min-height: 100vh;z-index:999;overflow:hidden;position: relative;text-align: center;color:#ffffff;max-width:640px;}
+#logincon{
+    .logo{margin-top:0.1rem;}
+    .logoimg{width:2rem;height:2rem;}
+    .title{font-size:0.20rem;font-weight: 600;padding: 0.05rem;}
+    .subtitle{font-size:0.12rem;padding: 0 0.1rem 0.1rem;}
+    .login-btn{margin-top: 0.25rem;}
+    .login-btn .el-button--primary{width:100%;}
+    .login-input{background-color: #eeeeee;height:0.4rem;margin-top: 0.2rem;border-radius: 0.1rem;display:flex;align-items: center;}
+    .login-input-icon{width:0.5rem;display:flex;align-items: center;justify-content: center;flex:1;}
+    .login-input-svg{width:0.18rem;height:0.18rem;}
+    .login-input-content{display:flex;flex:4;text-align: left;}
+    .login-input-content input{color:#000000;outline: none;border: none;background-color: #eeeeee;height:0.35rem;line-height: 0.35rem;font-size:0.18rem;width:95%;}
+    .forget_password{margin-top: 0.2rem;color:#1e2125;font-size:0.15rem;letter-spacing: 1px;}
+    .bottomwords{width: 100%;text-align: center;font-size:0.10rem;position: absolute;left:0;bottom:0}
+}

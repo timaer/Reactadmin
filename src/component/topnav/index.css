@@ -1,0 +1,7 @@
+.topbar-container{height:50px;display: flex;align-items: center;background-color: #ffffff;color:#ffffff;box-shadow: 1px 4px rgba(0,21,41,.08)}
+.topbar-right{margin-left: auto;padding: 0.05rem;display: flex;align-items: center;}
+.topbar-right .exiticon{width:0.15rem;height: 0.15rem;}
+.topbar-left{display: flex;align-items: center;}
+.topbar-left .icon{padding: 0 0.15rem;}
+.topbar-right .welcome{color:#48576a;font-size:0.1rem;}
+.topbar-right .toggle{display: flex;align-items: center;color:#48576a;font-size:0.1rem;margin-right: 0.1rem;}
