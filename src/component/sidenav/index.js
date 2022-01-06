@@ -22,8 +22,8 @@ export const MenuList=[
 function SideNav(){
    const activeTabName=useSelector(state=>state.app.activeTabName) 
    const myPowerList=useSelector(state=>state.user.powerlist)
+   const isMenuFolded=useSelector(state=>state.app.isMenuFold)
    
-
    const getPowerMenu=()=>{
        let myPowerMenu=[]
        for(let i=0;i<MenuList.length;i++){
@@ -61,22 +61,25 @@ function SideNav(){
    const setActive=(tabname)=>{
        dispatch(setActiveTab(tabname))
    }
+   let titleStyle=isMenuFolded?'menutitle hide':'menutitle'
    const menucon=myPowerMenuList.map((item)=>{
         if(item.haschildren){
-            let submenucon=item.children.map((child)=><div onClick={()=>handleClick(child)} key={child.name}><Menu.Item index={child.name}><Icon src={child.icon}/>{child.title}</Menu.Item></div>)  
+            let submenucon=item.children.map((child)=><div onClick={()=>handleClick(child)} key={child.name}><Menu.Item index={child.name}><Icon src={child.icon}/><span className={titleStyle}>{child.title}</span></Menu.Item></div>)  
             return(
-            <Menu.SubMenu key={item.name} index={item.name} title={<span><Icon src={item.icon}/>{item.title}</span>}>
+            <Menu.SubMenu key={item.name} index={item.name} title={<span><Icon src={item.icon}/><span className={titleStyle}>{item.title}</span></span>}>
                 {submenucon}
             </Menu.SubMenu>
             )
         }else{
-            return (<div onClick={()=>handleClick(item)} key={item.name}><Menu.Item index={item.name}><Icon src={item.icon}/>{item.title}</Menu.Item></div>)
+            return (<div onClick={()=>handleClick(item)} key={item.name}><Menu.Item index={item.name} className='mainmenu'><Icon src={item.icon}/><span className={titleStyle}>{item.title}</span></Menu.Item></div>)
         }
    })
    return(
-    <Menu className="el-menu-vertical-demo" theme="dark" defaultActive={activeTabName} onSelect={(tabindex)=>setActive(tabindex)}>
-        {menucon}
-    </Menu>
+    <div className={isMenuFolded?'app-left-folded':'app-left'}>
+        <Menu className="el-menu-vertical-demo" theme="dark" defaultActive={activeTabName} onSelect={(tabindex)=>setActive(tabindex)}>
+            {menucon}
+        </Menu>
+    </div>
     ) 
 }
 

@@ -11,24 +11,20 @@ import {useSelector} from 'react-redux'
 function App(){
     const loading=useSelector(state=>state.app.loading)
     const isTabView=useSelector(state=>state.app.isTabView)
+    const isMenuFolded=useSelector(state=>state.app.isMenuFold)
     const NormalView=<RouterView />
     const FrameView=(
           <>
-            <div className='app-left'>
-                  <SideNav/>
-            </div>
-            <div className='app-right'>
-                  <div className='app-righttop'>
-                     <TopNav/>  
-                  </div>
-
-                  <Loading loading={loading}>
+            <SideNav/>
+            <div className={isMenuFolded?'app-right-folded':'app-right'}>
+                  <TopNav/>        
                   <div className='app-maincontent'>
-                       <TabView isTabView={isTabView}>
-                            <RouterView/>
-                        </TabView>
+                      <Loading loading={loading}>
+                               <TabView isTabView={isTabView}>
+                                    <RouterView/>
+                                </TabView>
+                        </Loading> 
                   </div>
-                  </Loading> 
             </div>
         </> 
     )

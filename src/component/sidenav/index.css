@@ -1,0 +1,12 @@
+.app-left{width:210px;min-height: 100vh;background-color: #324157;transition: width 0.5s;}
+.app-left .menutitle{padding-left: 10px;}
+.app-left .mainmenu{padding: 0 10px;}
+.app-left .submenu{padding: 0 10px;}
+.app-left .el-submenu__title{padding: 0 10px;}
+
+.app-left-folded{width:55px;min-height: 100vh;background-color: #324157;transition: width 0.5s;}
+.app-left-folded .menutitle{padding-left: 10px;}
+.app-left-folded .mainmenu{padding: 0 10px;}
+.app-left-folded .submenu{padding: 0 10px;}
+.app-left-folded .el-submenu__title{padding: 0 10px;}
+

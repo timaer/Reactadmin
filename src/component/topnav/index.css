@@ -5,3 +5,6 @@
 .topbar-left .icon{padding: 0 0.15rem;}
 .topbar-right .welcome{color:#48576a;font-size:0.1rem;}
 .topbar-right .toggle{display: flex;align-items: center;color:#48576a;font-size:0.1rem;margin-right: 0.1rem;}
+
+.app-righttop{position: fixed;left:210px;top:0;width:calc( 100% - 210px );z-index:999;transition: left 0.5s;}
+.app-righttop-folded{position: fixed;left:55px;top:0;width:calc( 100% - 55px );z-index:999;transition: left 0.5s;}

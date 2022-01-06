@@ -1,7 +1,6 @@
-#app{display: flex;background-color: #ffffff;justify-content: center;}
+#app{display: flex;background-color: #ffffff;}
 #app{
-    .app-left{width:210px;min-height: 100vh;background-color: #324157;}
     .app-right{width:calc( 100% - 210px );}
-    .app-righttop{position: fixed;left:210px;top:0;width:calc( 100% - 210px );z-index:999;}
+    .app-right-folded{width:calc( 100% - 55px );}
     .app-maincontent{margin-top: 50px;}
 }

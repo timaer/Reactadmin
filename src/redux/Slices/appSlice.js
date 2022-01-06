@@ -6,7 +6,8 @@ const appSlice = createSlice({
     isTabView:true,
     loading: false,
     tabViewList:[],
-    activeTabName:''
+    activeTabName:'',
+    isMenuFold:false
   },
   reducers: {
     setIsTabView:(state,action)=>{
@@ -30,6 +31,9 @@ const appSlice = createSlice({
     setActiveTab:(state,action)=>{
       state.activeTabName=action.payload
     },
+    toggleFoldMenu:state=>{
+      state.isMenuFold=!state.isMenuFold
+    },
     emptyTabView:state=>{
       state.loading=false
       state.tabViewList=[]
@@ -38,5 +42,5 @@ const appSlice = createSlice({
   }
 });
 
-export const { setLoading,addTabView,delTabView,setActiveTab,emptyTabView,setIsTabView} = appSlice.actions
+export const { setLoading,addTabView,delTabView,setActiveTab,emptyTabView,setIsTabView,toggleFoldMenu} = appSlice.actions
 export default appSlice.reducer

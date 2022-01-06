@@ -14,7 +14,7 @@ const fireWall=(data)=>{
     }
 }
 const config={
-    baseURL: process.env.REACT_APP_BACKEND_API, //http://localhost/myjob/public/index.php/vueadmin
+    baseURL: process.env.REACT_APP_BACKEND_API, 
     timeout: 10000
   }
 
