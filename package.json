@@ -1,7 +1,7 @@
 {
   "homepage": ".",
   "name": "@timaer/react-admin",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": false,
   "dependencies": {
     "@babel/core": "7.12.3",
@@ -168,5 +168,11 @@
   "repository": "https://github.com/timaer/Reactadmin.git",
   "author": "Xu Qin <xuqin226@qq.com>",
   "license": "MIT",
-  "keywords":["react","admin","react-admin","element react","react admin"]
+  "keywords": [
+    "react",
+    "admin",
+    "react-admin",
+    "element react",
+    "react admin"
+  ]
 }
