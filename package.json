@@ -167,5 +167,6 @@
   "main": "index.js",
   "repository": "https://github.com/timaer/Reactadmin.git",
   "author": "Xu Qin <xuqin226@qq.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "keywords":["react","admin","react-admin","element react","react admin"]
 }
